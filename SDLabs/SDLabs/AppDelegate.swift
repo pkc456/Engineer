@@ -13,9 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        loadHomeScreen()
         return true
     }
 
@@ -41,6 +41,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    /// This is the method to load the Home screen
+    func loadHomeScreen() {
+        let homeNavigationController: UINavigationController = UIStoryboard.loadHomeNavigationViewController()
+        self.window?.rootViewController = homeNavigationController
+    }
 
 }
 

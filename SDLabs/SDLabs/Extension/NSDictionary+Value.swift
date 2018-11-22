@@ -8,6 +8,7 @@
 
 import Foundation
 
+///This is the extension of Dictionary
 extension Dictionary {
 
     func stringValueAtPath(keyPath: String) -> String {
@@ -45,7 +46,6 @@ extension Dictionary {
         let dictionary = self as NSDictionary
         return dictionary.value(forKeyPath: keyPath) as? Int == nil ? -1001 : dictionary.value(forKeyPath: keyPath) as! Int
     }
-
 
 }
 

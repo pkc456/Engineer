@@ -39,5 +39,4 @@ class HomeView: UIView {
         return view
     }
     
-
 }
