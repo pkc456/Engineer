@@ -12,17 +12,15 @@ import UIKit
 class HomeUserItem: NSObject {
     
     // MARK: - Properties
-    var itemArray: [String] = []
+    var name: String?
+    var image: String?
+    var items: [String]?
     
     /// This is the initializer method which initiates home user model
     init(data: [String: Any]) {
-        
-        if let agreement = data["items"] as? [String] {
-            for data in agreement {
-                itemArray.append(data)
-            }
-        }
-        
+        name = data.stringValueAtPath(keyPath: "name")
+        image = data.stringValueAtPath(keyPath: "image")
+        items = data.arrayOfStringAtPath(keyPath: "items")
     }
     
 }

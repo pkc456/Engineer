@@ -22,6 +22,7 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         
         homePresenter.attachView(self)
+        homePresenter.initiateFlow()
     }
     
 }
@@ -42,6 +43,11 @@ extension HomeViewController : IHomeView{
             self.present(alert, animated: true, completion: nil)
         }
     }
+    
+    func loadHomeDataInUI(homeModel: Home){
+        print("refresh screen")
+    }
+
     
     
 }

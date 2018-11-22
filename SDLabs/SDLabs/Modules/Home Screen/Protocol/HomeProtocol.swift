@@ -20,6 +20,11 @@ protocol IHomeView: NSObjectProtocol {
     ///This method will show the popup message
     /// - parameter message: message string of popup    
     func showPopup(message: String)
+    
+    ///This method will get called when there is success from api
+    /// - parameter homeModel: home model object
+    func loadHomeDataInUI(homeModel: Home)
+
 }
 
 
@@ -34,5 +39,8 @@ protocol IHomePresenter {
     
     /// Initiate flow for Service agreement screen    
     func initiateFlow()
+    
+    /// Call service for home screen
+    func getHomeData()
     
 }

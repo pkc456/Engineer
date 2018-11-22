@@ -13,20 +13,25 @@ class Home: NSObject {
 
     // MARK: - Properties
     var status: Bool?
+    var hasMore: Bool?
     var message: String?
-    var userData: [HomeUser] = []
+    var userData: HomeUser = HomeUser(data: [[:]])
 
     /// This is the initializer method which initiates Main home model
     init(data: [String: Any]) {
+        status = data.boolValueAtPath(keyPath: "status")
         message = data.stringValueAtPath(keyPath: "message")
 
-        if let agreement = data["data"] as? [[String: Any]] {
-            for data in agreement {
-                let agreementData = HomeUser(data: data)
-                userData.append(agreementData)
+        if let dataOfUser = data["data"] as? [String: Any] {
+            if let userArray = dataOfUser["users"] as? [[String: Any]] {
+                userData = HomeUser(data: userArray)
             }
+            
+            if let isMoreDataAvailable = dataOfUser["has_more"] as? Bool {
+                    hasMore = isMoreDataAvailable
+            }
+            
         }
-        
-        
     }
+    
 }

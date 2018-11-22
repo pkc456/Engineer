@@ -23,7 +23,21 @@ class HomePresenter: IHomePresenter {
     }
     
     func initiateFlow() {
-        
+        getHomeData()
+    }
+    
+    func getHomeData(){
+        self.homeView?.showLoader()
+        HomeService().readFromLocal { (isSucces, model) in
+            self.homeView?.hideLoader()
+            
+            if (model != nil) && isSucces{
+                self.homeView?.loadHomeDataInUI(homeModel: model!)
+            }else{
+                self.homeView?.showPopup(message: "Some error occured")
+            }
+            
+        }
     }
     
 }

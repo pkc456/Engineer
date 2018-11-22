@@ -23,6 +23,9 @@
 		417C543721A6D82300A7C0FE /* NMFLoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C543621A6D82300A7C0FE /* NMFLoadingOverlay.swift */; };
 		417C544021A6ED6000A7C0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417C543F21A6ED6000A7C0FE /* Assets.xcassets */; };
 		417C544221A6EDA400A7C0FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417C543C21A6ED3400A7C0FE /* LaunchScreen.storyboard */; };
+		417C544521A6EE4F00A7C0FE /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C544421A6EE4F00A7C0FE /* HomeService.swift */; };
+		417C544821A6EEF200A7C0FE /* HomeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 417C544721A6EEF200A7C0FE /* HomeData.json */; };
+		417C544A21A6EF4D00A7C0FE /* NSObject+JSONFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C544921A6EF4D00A7C0FE /* NSObject+JSONFileReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		417C543921A6ED1C00A7C0FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		417C543D21A6ED3400A7C0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		417C543F21A6ED6000A7C0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		417C544421A6EE4F00A7C0FE /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		417C544721A6EEF200A7C0FE /* HomeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HomeData.json; sourceTree = "<group>"; };
+		417C544921A6EF4D00A7C0FE /* NSObject+JSONFileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+JSONFileReader.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		417C540D21A6C9DE00A7C0FE /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
+				417C544321A6EE3F00A7C0FE /* Service */,
 				417C542E21A6D1CD00A7C0FE /* Protocol */,
 				417C542D21A6D1B700A7C0FE /* Presenter */,
 				417C542821A6D1AD00A7C0FE /* XIB */,
@@ -128,6 +135,7 @@
 		417C541E21A6CF8200A7C0FE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				417C544921A6EF4D00A7C0FE /* NSObject+JSONFileReader.swift */,
 				417C541F21A6CF9B00A7C0FE /* NSDictionary+Value.swift */,
 				417C543321A6D43600A7C0FE /* UIStoryboard+ViewControllerLoader.swift */,
 			);
@@ -170,6 +178,7 @@
 		417C543821A6ED0E00A7C0FE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				417C544621A6EEE200A7C0FE /* JSON */,
 				417C543F21A6ED6000A7C0FE /* Assets.xcassets */,
 				417C543B21A6ED3400A7C0FE /* Base.lproj */,
 				417C543921A6ED1C00A7C0FE /* Info.plist */,
@@ -183,6 +192,22 @@
 				417C543C21A6ED3400A7C0FE /* LaunchScreen.storyboard */,
 			);
 			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		417C544321A6EE3F00A7C0FE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				417C544421A6EE4F00A7C0FE /* HomeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		417C544621A6EEE200A7C0FE /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				417C544721A6EEF200A7C0FE /* HomeData.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				417C544221A6EDA400A7C0FE /* LaunchScreen.storyboard in Resources */,
+				417C544821A6EEF200A7C0FE /* HomeData.json in Resources */,
 				417C542B21A6D1AD00A7C0FE /* Home.storyboard in Resources */,
 				417C542C21A6D1AD00A7C0FE /* HomeView.xib in Resources */,
 				417C544021A6ED6000A7C0FE /* Assets.xcassets in Resources */,
@@ -261,10 +287,12 @@
 				417C53FB21A6C9A700A7C0FE /* AppDelegate.swift in Sources */,
 				417C543721A6D82300A7C0FE /* NMFLoadingOverlay.swift in Sources */,
 				417C542021A6CF9B00A7C0FE /* NSDictionary+Value.swift in Sources */,
+				417C544A21A6EF4D00A7C0FE /* NSObject+JSONFileReader.swift in Sources */,
 				417C543021A6D1DD00A7C0FE /* HomeProtocol.swift in Sources */,
 				417C541921A6CCFD00A7C0FE /* Home.swift in Sources */,
 				417C543421A6D43600A7C0FE /* UIStoryboard+ViewControllerLoader.swift in Sources */,
 				417C541121A6CA1000A7C0FE /* BaseViewController.swift in Sources */,
+				417C544521A6EE4F00A7C0FE /* HomeService.swift in Sources */,
 				417C541D21A6CE4C00A7C0FE /* HomeUserItem.swift in Sources */,
 				417C541621A6CCB900A7C0FE /* HomeViewController.swift in Sources */,
 				417C541B21A6CD4F00A7C0FE /* HomeUser.swift in Sources */,
