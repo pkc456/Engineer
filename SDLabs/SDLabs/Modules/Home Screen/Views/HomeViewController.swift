@@ -38,10 +38,10 @@ extension HomeViewController : IHomeView{
     }
     
     func showPopup(message: String) {
-        if self.view.window != nil {
-            let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
-            self.present(alert, animated: true, completion: nil)
-        }
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func loadHomeDataInUI(homeModel: Home){

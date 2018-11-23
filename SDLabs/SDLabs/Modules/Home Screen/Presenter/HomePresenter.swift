@@ -28,14 +28,14 @@ class HomePresenter: IHomePresenter {
     
     func getHomeData(){
         self.homeView?.showLoader()
-        HomeService().readFromLocal { (isSucces, model) in
+        HomeService().readFromLocal { (isSuccess, model) in
             self.homeView?.hideLoader()
-            
-            if (model != nil) && isSucces{
-                self.homeView?.loadHomeDataInUI(homeModel: model!)
-            }else{
+                        
+            if !isSuccess || model == nil{
                 self.homeView?.showPopup(message: "Some error occured")
-            }
+            }else{
+                self.homeView?.loadHomeDataInUI(homeModel: model!)
+            }                        
             
         }
     }
