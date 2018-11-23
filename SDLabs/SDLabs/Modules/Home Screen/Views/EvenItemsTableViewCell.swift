@@ -11,15 +11,20 @@ import UIKit
 ///This class comprises of UI in case of even items; consist of two images
 class EvenItemsTableViewCell: UITableViewCell {
 
+    //MARK:- IBOutlets
+
+    @IBOutlet weak var imageViewOne: UIImageView!
+    @IBOutlet weak var imageViewTwo: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func setContentToCell(itemObject: HomeUserItem){
     }
     
 }

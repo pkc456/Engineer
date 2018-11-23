@@ -11,15 +11,16 @@ import UIKit
 ///This class comprises of UI in case of odd items; consist of one image
 class OddItemsTableViewCell: UITableViewCell {
 
+    //MARK:- IBOutlets
+    @IBOutlet weak var imageViewOne: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }

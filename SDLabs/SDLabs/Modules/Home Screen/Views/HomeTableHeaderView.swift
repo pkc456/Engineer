@@ -33,11 +33,18 @@ class HomeTableHeaderView: UIView {
         view.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
         
         addSubview(view)
+        
+        setUI()
     }
     
     private func loadViewFromNib() -> UIView {
         let view = UINib(nibName: "HomeTableHeaderView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
         return view
+    }
+    
+    //This method perform the UI operations like set custom font, layer operations etc
+    private func setUI(){
+        imageViewUser.layer.cornerRadius = imageViewUser.frame.height/2
     }
     
     /// Method called when data is ready to render the view

@@ -67,6 +67,17 @@ class HomeView: UIView {
         return (data.items?.count ?? 0) % 2 == 0 ? false : true
     }
     
+    /// Determine the number of rows in section
+    /// - parameter data: Home user item model object
+    /// - Returns: The number of rows in section.
+    func calculateNumberOfRow(data: HomeUserItem) -> Int{
+        let isOdd = isOddItemUIShown(data: data)
+        
+        var numberOfRows = (data.items?.count ?? 0)/2
+        numberOfRows = isOdd ? (numberOfRows + 1) : numberOfRows
+        return numberOfRows
+    }
+    
     
     //MARK:- Table view cells
     
@@ -102,7 +113,7 @@ extension HomeView : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let userItem = dataSource.userData.userArray[section]
-        return userItem.items?.count ?? 0
+        return calculateNumberOfRow(data: userItem)                
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
