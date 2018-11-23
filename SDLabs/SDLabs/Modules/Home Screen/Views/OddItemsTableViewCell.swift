@@ -20,7 +20,16 @@ class OddItemsTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+    }
+    
+    /// Method called when data is ready to render the view
+    /// - parameter homeUserItem: homeUserItem model instance
+    func initiateWith(imageUrlString: String?) {
+        if let imageUrl = imageUrlString{
+            if !imageUrl.isEmpty{
+                imageViewOne.af_setImage(withURL: URL(string: imageUrl)!)
+            }
+        }
     }
     
 }

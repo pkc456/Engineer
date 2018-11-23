@@ -83,8 +83,9 @@ class HomeView: UIView {
     
     ///This method returns the Even Items Table View Cell
     /// - parameter indexPath: An index path locating a row in tableView.
+    /// - parameter data: Home user item model object
     /// - Returns: EvenItems Table View Cell instance
-    func getEvenItemsTableViewCell(indexPath: IndexPath) -> EvenItemsTableViewCell{
+    func getEvenItemsTableViewCell(indexPath: IndexPath, data: HomeUserItem) -> EvenItemsTableViewCell{
         let cell = tableview.dequeueReusableCell(withIdentifier: "EvenItemsTableViewCell", for: indexPath) as! EvenItemsTableViewCell
         return cell
     }
@@ -94,6 +95,10 @@ class HomeView: UIView {
     /// - Returns: OddItems Table View Cell instance
     func getOddItemsTableViewCell(indexPath: IndexPath) -> OddItemsTableViewCell{
         let cell = tableview.dequeueReusableCell(withIdentifier: "OddItemsTableViewCell", for: indexPath) as! OddItemsTableViewCell
+        
+        let data = dataSource.userData.userArray[0]
+        cell.initiateWith(imageUrlString: data.image)
+        
         return cell
     }
     
@@ -124,7 +129,7 @@ extension HomeView : UITableViewDelegate, UITableViewDataSource{
         if isOddUI && indexPath.row == 0{
             return getOddItemsTableViewCell(indexPath: indexPath)
         }else{
-            return getEvenItemsTableViewCell(indexPath: indexPath)
+            return getEvenItemsTableViewCell(indexPath: indexPath,data: userItem)
         }
         
         

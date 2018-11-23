@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class HomeTableHeaderView: UIView {
 
@@ -50,7 +51,12 @@ class HomeTableHeaderView: UIView {
     /// Method called when data is ready to render the view
     /// - parameter homeUserItem: homeUserItem model instance
     func initiateWith(homeUserItem: HomeUserItem) {
-//        imageViewUser.image = UIImage(named: homeUserItem.image ?? "")
+        if let imageUrl = homeUserItem.image{
+            if !imageUrl.isEmpty{
+                imageViewUser.af_setImage(withURL: URL(string: imageUrl)!)
+            }
+        }
+        
         labelUserName.text = homeUserItem.name
     }
 

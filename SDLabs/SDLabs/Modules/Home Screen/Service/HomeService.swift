@@ -11,6 +11,17 @@ import Foundation
 /// Class for calling api related to home screen
 class HomeService {
     
+    func getHomeData(onCompletion: @escaping (Bool, Home?) -> Void){
+        WebServiceHandler.sharedInstance.callGetUserApiRequest { (isSuccess, model) in
+            if isSuccess {
+                onCompletion(true, model)
+            }else{
+                onCompletion(false, nil)
+            }
+        }
+    }
+    
+    
     /// Fetched home screen data from local json file
     func readFromLocal(onCompletion: @escaping (Bool, Home?) -> Void) {    
         
