@@ -45,9 +45,7 @@ extension HomeViewController : IHomeView{
     }
     
     func loadHomeDataInUI(homeModel: Home){
-        print("refresh screen")
+        homeView.reloadViewWithModel(homeModel: homeModel)
     }
-
-    
     
 }
