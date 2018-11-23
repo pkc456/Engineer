@@ -30,6 +30,8 @@
 		41FBCD4F21A7D19600C40D8C /* EvenItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FBCD4E21A7D19600C40D8C /* EvenItemsTableViewCell.swift */; };
 		41FBCD5321A7D2EB00C40D8C /* HomeTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FBCD5221A7D2EB00C40D8C /* HomeTableHeaderView.swift */; };
 		41FBCD5721A7D30400C40D8C /* HomeTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FBCD5621A7D30400C40D8C /* HomeTableHeaderView.xib */; };
+		41FBCD5B21A7DFBB00C40D8C /* OddItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FBCD5921A7DFBB00C40D8C /* OddItemsTableViewCell.xib */; };
+		41FBCD5D21A7DFCE00C40D8C /* OddItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FBCD5C21A7DFCE00C40D8C /* OddItemsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		41FBCD4E21A7D19600C40D8C /* EvenItemsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvenItemsTableViewCell.swift; sourceTree = "<group>"; };
 		41FBCD5221A7D2EB00C40D8C /* HomeTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableHeaderView.swift; sourceTree = "<group>"; };
 		41FBCD5621A7D30400C40D8C /* HomeTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableHeaderView.xib; sourceTree = "<group>"; };
+		41FBCD5921A7DFBB00C40D8C /* OddItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OddItemsTableViewCell.xib; sourceTree = "<group>"; };
+		41FBCD5C21A7DFCE00C40D8C /* OddItemsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OddItemsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 		417C541421A6CCAB00A7C0FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				41FBCD5C21A7DFCE00C40D8C /* OddItemsTableViewCell.swift */,
 				41FBCD4E21A7D19600C40D8C /* EvenItemsTableViewCell.swift */,
 				417C541521A6CCB900A7C0FE /* HomeViewController.swift */,
 				417C542421A6D05B00A7C0FE /* HomeView.swift */,
@@ -159,6 +164,7 @@
 				417C542A21A6D1AD00A7C0FE /* HomeView.xib */,
 				41FBCD4B21A7D18100C40D8C /* EvenItemsTableViewCell.xib */,
 				41FBCD5621A7D30400C40D8C /* HomeTableHeaderView.xib */,
+				41FBCD5921A7DFBB00C40D8C /* OddItemsTableViewCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 				417C542B21A6D1AD00A7C0FE /* Home.storyboard in Resources */,
 				417C542C21A6D1AD00A7C0FE /* HomeView.xib in Resources */,
 				41FBCD4D21A7D18100C40D8C /* EvenItemsTableViewCell.xib in Resources */,
+				41FBCD5B21A7DFBB00C40D8C /* OddItemsTableViewCell.xib in Resources */,
 				417C544021A6ED6000A7C0FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +308,7 @@
 				417C53FB21A6C9A700A7C0FE /* AppDelegate.swift in Sources */,
 				41FBCD4F21A7D19600C40D8C /* EvenItemsTableViewCell.swift in Sources */,
 				417C543721A6D82300A7C0FE /* NMFLoadingOverlay.swift in Sources */,
+				41FBCD5D21A7DFCE00C40D8C /* OddItemsTableViewCell.swift in Sources */,
 				417C542021A6CF9B00A7C0FE /* NSDictionary+Value.swift in Sources */,
 				417C544A21A6EF4D00A7C0FE /* NSObject+JSONFileReader.swift in Sources */,
 				417C543021A6D1DD00A7C0FE /* HomeProtocol.swift in Sources */,

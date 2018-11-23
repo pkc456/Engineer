@@ -44,10 +44,13 @@ class HomeView: UIView {
         return view
     }
     
+    //MARK:- User defined methods
     
     ///This methood register the custom table cells so that they can be reused
     private func registerTableCells(){
         tableview.register(UINib.init(nibName: "EvenItemsTableViewCell", bundle: nil), forCellReuseIdentifier: "EvenItemsTableViewCell")
+        
+        tableview.register(UINib.init(nibName: "OddItemsTableViewCell", bundle: nil), forCellReuseIdentifier: "OddItemsTableViewCell")
     }
     
     ///Reload view with new table datasource
@@ -57,14 +60,29 @@ class HomeView: UIView {
         tableview.reloadData()
     }
     
+    /// Determine wether the odd items UI will be shown or not
+    /// - parameter data: Home user item model object
+    /// - Returns: A boolean value whether to show odd item UI or not
+    func isOddItemUIShown(data: HomeUserItem) -> Bool{        
+        return (data.items?.count ?? 0) % 2 == 0 ? false : true
+    }
+    
     
     //MARK:- Table view cells
     
-    ///This method returns the EvenItems Table View Cell
+    ///This method returns the Even Items Table View Cell
     /// - parameter indexPath: An index path locating a row in tableView.
     /// - Returns: EvenItems Table View Cell instance
     func getEvenItemsTableViewCell(indexPath: IndexPath) -> EvenItemsTableViewCell{
         let cell = tableview.dequeueReusableCell(withIdentifier: "EvenItemsTableViewCell", for: indexPath) as! EvenItemsTableViewCell
+        return cell
+    }
+    
+    ///This method returns the Odd Items Table View Cell
+    /// - parameter indexPath: An index path locating a row in tableView.
+    /// - Returns: OddItems Table View Cell instance
+    func getOddItemsTableViewCell(indexPath: IndexPath) -> OddItemsTableViewCell{
+        let cell = tableview.dequeueReusableCell(withIdentifier: "OddItemsTableViewCell", for: indexPath) as! OddItemsTableViewCell
         return cell
     }
     
@@ -88,7 +106,17 @@ extension HomeView : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return getEvenItemsTableViewCell(indexPath: indexPath)
+        
+        let userItem = dataSource.userData.userArray[indexPath.section]
+        let isOddUI = isOddItemUIShown(data: userItem)
+        
+        if isOddUI && indexPath.row == 0{
+            return getOddItemsTableViewCell(indexPath: indexPath)
+        }else{
+            return getEvenItemsTableViewCell(indexPath: indexPath)
+        }
+        
+        
     }
     
 }
