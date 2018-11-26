@@ -24,7 +24,10 @@ class EvenItemsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setContentToCell(itemObject: HomeUserItem){
+    /// Method called when data is ready to render the view
+    /// - parameter initiateWith: image url string for first image
+    /// - parameter initiateWith: image url string for second image
+    func initiateWith(imageUrlOne: String, imageUrlTwo: String){
     }
     
 }

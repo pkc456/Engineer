@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4151A8A421AB9E88008E71A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4151A8A321AB9E88008E71A1 /* Constants.swift */; };
 		416C0EA521A80F80001ADFEA /* WebServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416C0EA421A80F80001ADFEA /* WebServiceHandler.swift */; };
 		417C53FB21A6C9A700A7C0FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C53FA21A6C9A700A7C0FE /* AppDelegate.swift */; };
 		417C541121A6CA1000A7C0FE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C541021A6CA1000A7C0FE /* BaseViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4151A8A321AB9E88008E71A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		416C0EA421A80F80001ADFEA /* WebServiceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceHandler.swift; sourceTree = "<group>"; };
 		417C53F721A6C9A700A7C0FE /* SDLabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDLabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417C53FA21A6C9A700A7C0FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			children = (
 				416C0EA421A80F80001ADFEA /* WebServiceHandler.swift */,
 				417C543621A6D82300A7C0FE /* NMFLoadingOverlay.swift */,
+				4151A8A321AB9E88008E71A1 /* Constants.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				417C542521A6D05B00A7C0FE /* HomeView.swift in Sources */,
+				4151A8A421AB9E88008E71A1 /* Constants.swift in Sources */,
 				416C0EA521A80F80001ADFEA /* WebServiceHandler.swift in Sources */,
 				417C53FB21A6C9A700A7C0FE /* AppDelegate.swift in Sources */,
 				41FBCD4F21A7D19600C40D8C /* EvenItemsTableViewCell.swift in Sources */,

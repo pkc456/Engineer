@@ -35,9 +35,9 @@ class WebServiceHandler: NSObject {
     // MARK:- Get API call
     
     ///This method calls the user api
-    func callGetUserApiRequest(onCompletion: @escaping (Bool, Home?) -> Void) {
+    func callGetUserApiRequest(onCompletion: @escaping (Bool, Home?) -> Void) {        
         
-        let urlString = "http://sd2-hiring.herokuapp.com/api/users?offset=10&limit=10"
+        let urlString = Constants.APIUrl.kBaseUrl + Constants.APIUrl.kHomeApi
         
         self.getApiRequest(url: urlString) { (isSuccess, model) in
             
