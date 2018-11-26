@@ -87,6 +87,11 @@ class HomeView: UIView {
     /// - Returns: EvenItems Table View Cell instance
     func getEvenItemsTableViewCell(indexPath: IndexPath, data: HomeUserItem) -> EvenItemsTableViewCell{
         let cell = tableview.dequeueReusableCell(withIdentifier: "EvenItemsTableViewCell", for: indexPath) as! EvenItemsTableViewCell
+        
+        let data1 = dataSource.userData.userArray[indexPath.row]
+        let data2 = dataSource.userData.userArray[indexPath.row+1]
+        cell.initiateWith(imageUrlOne: data1.image!, imageUrlTwo: data2.image!)
+        
         return cell
     }
     

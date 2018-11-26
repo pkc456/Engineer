@@ -28,6 +28,15 @@ class EvenItemsTableViewCell: UITableViewCell {
     /// - parameter initiateWith: image url string for first image
     /// - parameter initiateWith: image url string for second image
     func initiateWith(imageUrlOne: String, imageUrlTwo: String){
+        
+        if !imageUrlOne.isEmpty{
+            imageViewOne.af_setImage(withURL: URL(string: imageUrlOne)!)
+        }
+        
+        if !imageUrlTwo.isEmpty{
+            imageViewTwo.af_setImage(withURL: URL(string: imageUrlTwo)!)
+        }
+                
     }
     
 }
