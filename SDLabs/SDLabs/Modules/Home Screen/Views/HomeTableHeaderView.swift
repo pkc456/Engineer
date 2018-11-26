@@ -55,6 +55,8 @@ class HomeTableHeaderView: UIView {
         if let imageUrl = homeUserItem.image{
             if !imageUrl.isEmpty{
                 imageViewUser.af_setImage(withURL: URL(string: imageUrl)!)
+            }else{
+                imageViewUser.image = UIImage(named: "")
             }
         }
         
