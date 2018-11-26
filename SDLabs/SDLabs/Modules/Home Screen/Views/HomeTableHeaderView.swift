@@ -35,7 +35,6 @@ class HomeTableHeaderView: UIView {
         
         addSubview(view)
         
-        setUI()
     }
     
     private func loadViewFromNib() -> UIView {
@@ -43,14 +42,16 @@ class HomeTableHeaderView: UIView {
         return view
     }
     
-    //This method perform the UI operations like set custom font, layer operations etc
+    ///This method perform the UI operations like set custom font, layer operations etc
     private func setUI(){
-        imageViewUser.layer.cornerRadius = imageViewUser.frame.height/2
+        imageViewUser.layer.cornerRadius = imageViewUser.frame.size.width/2
     }
     
     /// Method called when data is ready to render the view
     /// - parameter homeUserItem: homeUserItem model instance
     func initiateWith(homeUserItem: HomeUserItem) {
+        setUI()
+        
         if let imageUrl = homeUserItem.image{
             if !imageUrl.isEmpty{
                 imageViewUser.af_setImage(withURL: URL(string: imageUrl)!)

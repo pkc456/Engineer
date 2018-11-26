@@ -110,6 +110,10 @@ class HomeView: UIView {
 }
 
 extension HomeView : UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return self.view.frame.height * 0.15
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let userItemModelObject: HomeUserItem = dataSource.userData.userArray[section]
         let headerView = HomeTableHeaderView(frame: CGRect.zero)
