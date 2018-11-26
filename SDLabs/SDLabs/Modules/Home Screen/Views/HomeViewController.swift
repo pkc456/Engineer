@@ -30,7 +30,7 @@ class HomeViewController: BaseViewController {
 extension HomeViewController : IHomeView{
     
     func showLoader() {
-        NMFLoadingOverlay.shared.showOverlay(view: self.view, with: "Please wait")
+        NMFLoadingOverlay.shared.showOverlay(view: self.view, with: Constants.LoaderText.kLoading)
     }
     
     func hideLoader() {

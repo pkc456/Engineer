@@ -32,8 +32,8 @@ class HomePresenter: IHomePresenter {
         HomeService().getHomeData { (isSuccess, model) in
             self.homeView?.hideLoader()
             
-            if !isSuccess || model == nil{
-                self.homeView?.showPopup(message: "Some error occured")
+            if !isSuccess || model == nil{                
+                self.homeView?.showPopup(message: Constants.LoaderText.kError)
             }else{
                 self.homeView?.loadHomeDataInUI(homeModel: model!)
             }

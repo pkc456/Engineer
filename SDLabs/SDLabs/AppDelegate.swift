@@ -41,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    //MARK:- User defined methods
     /// This is the method to load the Home screen
     func loadHomeScreen() {
         let homeNavigationController: UINavigationController = UIStoryboard.loadHomeNavigationViewController()
